@@ -7,13 +7,18 @@ public class MyWorld extends World {
         Elephant elephant  = new Elephant();
         addObject(elephant, 300, 300);    
         
+        Label labelScore = new Label(0, 60);
+        addObject(labelScore, 20, 20);
+        
         spawnApple();
     }
     
     public void spawnApple()
     {
         Apple apple = new Apple();
-        addObject(apple, 300, 0);
+        int x = Greenfoot.getRandomNumber(600);
+        int y = 0;
+        addObject(apple, x, y);
     }
 
 }
